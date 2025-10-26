@@ -1,0 +1,163 @@
+[
+  {
+    "Naziv": "Real Madrid CF",
+    "Grad": "Madrid",
+    "Država": "Španjolska",
+    "Sport": "Nogomet",
+    "Liga": "La Liga",
+    "Godina_osnutka": 1902,
+    "Stadion_dvorana": "Santiago Bernabéu",
+    "Kapacitet": 81044,
+    "Glavni_trener": { "Ime": "Carlo", "Prezime": "Ancelotti" },
+    "Naslovi_prvaka": 35,
+    "Igrači": [
+      { "Ime": "Vinícius", "Prezime": "Júnior", "Pozicija": "Krilo" },
+      { "Ime": "Jude", "Prezime": "Bellingham", "Pozicija": "Vezni" }
+    ]
+  },
+  {
+    "Naziv": "FC Barcelona",
+    "Grad": "Barcelona",
+    "Država": "Španjolska",
+    "Sport": "Nogomet",
+    "Liga": "La Liga",
+    "Godina_osnutka": 1899,
+    "Stadion_dvorana": "Spotify Camp Nou",
+    "Kapacitet": 99354,
+    "Glavni_trener": { "Ime": "Hansi", "Prezime": "Flick" },
+    "Naslovi_prvaka": 27,
+    "Igrači": [
+      { "Ime": "Robert", "Prezime": "Lewandowski", "Pozicija": "Napadač" },
+      { "Ime": "Pedri", "Prezime": "González", "Pozicija": "Vezni" }
+    ]
+  },
+  {
+    "Naziv": "Manchester United FC",
+    "Grad": "Manchester",
+    "Država": "Engleska",
+    "Sport": "Nogomet",
+    "Liga": "Premier League",
+    "Godina_osnutka": 1878,
+    "Stadion_dvorana": "Old Trafford",
+    "Kapacitet": 74879,
+    "Glavni_trener": { "Ime": "Erik", "Prezime": "ten Hag" },
+    "Naslovi_prvaka": 20,
+    "Igrači": [
+      { "Ime": "Bruno", "Prezime": "Fernandes", "Pozicija": "Vezni" },
+      { "Ime": "Marcus", "Prezime": "Rashford", "Pozicija": "Napadač" }
+    ]
+  },
+  {
+    "Naziv": "Manchester City FC",
+    "Grad": "Manchester",
+    "Država": "Engleska",
+    "Sport": "Nogomet",
+    "Liga": "Premier League",
+    "Godina_osnutka": 1880,
+    "Stadion_dvorana": "Etihad Stadium",
+    "Kapacitet": 53400,
+    "Glavni_trener": { "Ime": "Pep", "Prezime": "Guardiola" },
+    "Naslovi_prvaka": 9,
+    "Igrači": [
+      { "Ime": "Erling", "Prezime": "Haaland", "Pozicija": "Napadač" },
+      { "Ime": "Kevin", "Prezime": "De Bruyne", "Pozicija": "Vezni" }
+    ]
+  },
+  {
+    "Naziv": "Liverpool FC",
+    "Grad": "Liverpool",
+    "Država": "Engleska",
+    "Sport": "Nogomet",
+    "Liga": "Premier League",
+    "Godina_osnutka": 1892,
+    "Stadion_dvorana": "Anfield",
+    "Kapacitet": 54074,
+    "Glavni_trener": { "Ime": "Arne", "Prezime": "Slot" },
+    "Naslovi_prvaka": 19,
+    "Igrači": [
+      { "Ime": "Mohamed", "Prezime": "Salah", "Pozicija": "Napadač" },
+      { "Ime": "Virgil", "Prezime": "van Dijk", "Pozicija": "Branič" }
+    ]
+  },
+  {
+    "Naziv": "FC Bayern München",
+    "Grad": "München",
+    "Država": "Njemačka",
+    "Sport": "Nogomet",
+    "Liga": "Bundesliga",
+    "Godina_osnutka": 1900,
+    "Stadion_dvorana": "Allianz Arena",
+    "Kapacitet": 75000,
+    "Glavni_trener": { "Ime": "Vincent", "Prezime": "Kompany" },
+    "Naslovi_prvaka": 33,
+    "Igrači": [
+      { "Ime": "Harry", "Prezime": "Kane", "Pozicija": "Napadač" },
+      { "Ime": "Joshua", "Prezime": "Kimmich", "Pozicija": "Vezni" }
+    ]
+  },
+  {
+    "Naziv": "Juventus FC",
+    "Grad": "Torino",
+    "Država": "Italija",
+    "Sport": "Nogomet",
+    "Liga": "Serie A",
+    "Godina_osnutka": 1897,
+    "Stadion_dvorana": "Allianz Stadium",
+    "Kapacitet": 41507,
+    "Glavni_trener": { "Ime": "Thiago", "Prezime": "Motta" },
+    "Naslovi_prvaka": 36,
+    "Igrači": [
+      { "Ime": "Federico", "Prezime": "Chiesa", "Pozicija": "Krilo" },
+      { "Ime": "Dusan", "Prezime": "Vlahović", "Pozicija": "Napadač" }
+    ]
+  },
+  {
+    "Naziv": "Paris Saint-Germain FC",
+    "Grad": "Pariz",
+    "Država": "Francuska",
+    "Sport": "Nogomet",
+    "Liga": "Ligue 1",
+    "Godina_osnutka": 1970,
+    "Stadion_dvorana": "Parc des Princes",
+    "Kapacitet": 47929,
+    "Glavni_trener": { "Ime": "Luis", "Prezime": "Enrique" },
+    "Naslovi_prvaka": 12,
+    "Igrači": [
+      { "Ime": "Kylian", "Prezime": "Mbappé", "Pozicija": "Napadač" },
+      { "Ime": "Ousmane", "Prezime": "Dembélé", "Pozicija": "Krilo" }
+    ]
+  },
+  {
+    "Naziv": "AC Milan",
+    "Grad": "Milano",
+    "Država": "Italija",
+    "Sport": "Nogomet",
+    "Liga": "Serie A",
+    "Godina_osnutka": 1899,
+    "Stadion_dvorana": "San Siro",
+    "Kapacitet": 80018,
+    "Glavni_trener": { "Ime": "Paulo", "Prezime": "Fonseca" },
+    "Naslovi_prvaka": 19,
+    "Igrači": [
+      { "Ime": "Rafael", "Prezime": "Leão", "Pozicija": "Krilo" },
+      { "Ime": "Mike", "Prezime": "Maignan", "Pozicija": "Vratar" }
+    ]
+  },
+  {
+    "Naziv": "Chelsea FC",
+    "Grad": "London",
+    "Država": "Engleska",
+    "Sport": "Nogomet",
+    "Liga": "Premier League",
+    "Godina_osnutka": 1905,
+    "Stadion_dvorana": "Stamford Bridge",
+    "Kapacitet": 40341,
+    "Glavni_trener": { "Ime": "Enzo", "Prezime": "Maresca" },
+    "Naslovi_prvaka": 6,
+    "Igrači": [
+      { "Ime": "Raheem", "Prezime": "Sterling", "Pozicija": "Krilo" },
+      { "Ime": "Enzo", "Prezime": "Fernández", "Pozicija": "Vezni" }
+    ]
+  }
+]
+
