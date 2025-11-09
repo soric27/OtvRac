@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
+</head>
+<body>
+  <h2>Klubovi iz baze</h2>
+   <form id="searchForm">
+    <input type="text" id="searchText" placeholder="Unesi pojam za pretragu...">
+    <select id="searchField">
+      <option value="">Svi atributi</option>
+      <option value="Naziv">Naziv</option>
+      <option value="Grad">Grad</option>
+      <option value="Država">Država</option>
+      <option value="Sport">Sport</option>
+      <option value="Liga">Liga</option>
+      <option value="Godina_osnutka">Godina osnutka</option>
+      <option value="Stadion_dvorana">Stadion</option>
+      <option value="Kapacitet">Kapacitet</option>
+      <option value="Naslovi_prvaka">Naslovi prvaka</option>
+      <option value="Glavni_trener">Trener</option>
+      <option value="Igrači">Igrači</option>
+    </select>
+      <button type="submit">Pretraži</button>
+    </form>
+    <div style="margin-bottom:1em;">
+      <button id="exportJSON"> Export JSON</button>
+      <button id="exportCSV"> Export CSV</button>
+    </div>
+
+
+    <table id="myTable"></table>
+    <script>
+      $(document).ready(function () {
+        const table = $('#myTable').DataTable({
+          ajax: {
+            url: 'http://localhost:3000/api/klubovi',
+            dataSrc: 'data'
+          },
+        columns: [
+          { data: 'Naziv', title: 'Naziv kluba' },
+          { data: 'Grad', title: 'Grad' },
+          { data: 'Država', title: 'Država' },
+          { data: 'Liga', title: 'Liga' },
+          { data: 'Sport', title: 'Sport' },
+          { data: 'Godina_osnutka', title: 'Osnovan' },
+          { data: 'Stadion_dvorana', title: 'Stadion' },
+          { data: 'Kapacitet', title: 'Kapacitet' },
+          { data: 'Naslovi_prvaka', title: 'Naslovi prvaka' },
+
+        
+          {
+            data: 'Glavni_trener',
+            title: 'Glavni trener',
+            render: function (data) {
+              if (!data) return '';
+              return data.Ime + ' ' + data.Prezime;
+            }
+          },
+
+        
+          {
+            data: 'Igrači',
+            title: 'Igrači',
+            render: function (data) {
+              if (!data || !Array.isArray(data)) return '';
+              return data.map(i => `${i.Ime} ${i.Prezime} (${i.Pozicija})`).join('<br>');
+            }
+          }
+        ]
+      });
+       $('#searchForm').on('submit', function (e) {
+        e.preventDefault();
+
+        const text = $('#searchText').val().trim();
+        const field = $('#searchField').val();
+
+        if (text === '') {
+          table.ajax.url('http://localhost:3000/api/klubovi').load();
+          return;
+        }
+
+        const query = field
+          ? `http://localhost:3000/api/klubovi?field=${field}&text=${encodeURIComponent(text)}`
+          : `http://localhost:3000/api/klubovi?text=${encodeURIComponent(text)}`;
+
+        table.ajax.url(query).load();
+      });
+        $('#exportJSON').on('click', function() {
+        const text = $('#searchText').val().trim();
+        const field = $('#searchField').val();
+        let url = 'http://localhost:3000/export/json';
+        if (text) {
+          const q = field
+            ? `?field=${encodeURIComponent(field)}&text=${encodeURIComponent(text)}`
+            : `?text=${encodeURIComponent(text)}`;
+          url += q;
+        }
+        window.location.href = url; 
+      });
+
+      $('#exportCSV').on('click', function() {
+        const text = $('#searchText').val().trim();
+        const field = $('#searchField').val();
+        let url = 'http://localhost:3000/export/csv';
+        if (text) {
+          const q = field
+            ? `?field=${encodeURIComponent(field)}&text=${encodeURIComponent(text)}`
+            : `?text=${encodeURIComponent(text)}`;
+          url += q;
+        }
+        window.location.href = url;
+      });
+
+    });
+    
+    </script>
+</body>
+</html>
